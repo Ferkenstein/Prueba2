@@ -20,19 +20,25 @@ public class Electrodomestico {
 
 	// Constructor por defecto
 	public Electrodomestico() {
+		this.precioBase =  PRECIO_INICIAL;
+		this.color = COLOR_INICIAL ;
+		this.consumoEnergetico = CONSUMO_INICIAL;
+		this.peso = PESO_INICIAL;
 	}
 
 	// Constructor con el precio y peso
 	public Electrodomestico(double precioBase, double peso) {
 		this.precioBase = precioBase;
 		this.peso = peso;
+		this.color = COLOR_INICIAL;
+		this.consumoEnergetico = CONSUMO_INICIAL;
 	}
 
 	// Constructor con todos los atributos
 	public Electrodomestico(double precioBase, String color, char consumoEnergetico, double peso) {
 		this.precioBase = precioBase;
-		this.color = color;
-		this.consumoEnergetico = consumoEnergetico;
+		comprobarYAsignarColor(color);
+		comprobarConsumoEnergetico(consumoEnergetico);
 		this.peso = peso;
 	}
 
@@ -72,7 +78,7 @@ public class Electrodomestico {
 
 // Comprueba que el color es correcto, sino lo es usa el color por defecto. Se invocará al crear el objeto y no será visible.
 
-	public void comprobarColor(String color) {
+	private void comprobarYAsignarColor(String color) {
 		// Transformar variable color a mayuscula
 		color = color.toUpperCase();
 

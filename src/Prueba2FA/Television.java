@@ -12,6 +12,9 @@ public class Television extends Electrodomestico {
 
 	// Constructor por defecto
 	public Television() {
+		super();
+		this.resolucion = RESOLUCION_INICIAL;
+		this.sintonizador = SINTONIZADOR_INICIAL;
 	}
 
 	// Constructor con el precio y peso.
@@ -40,21 +43,16 @@ public class Television extends Electrodomestico {
 	}
 
 	protected double PrecioFinalTelevision() {
-
 		double PrecioTotalTelevision = PrecioFinalElectrodomestico();
-
 		// Adicionar si precio
 		if (resolucion > 40) {
 			PrecioTotalTelevision = (PrecioTotalTelevision * 1.30);
-			return PrecioTotalTelevision;
 		}
 
 		// Adicionar 50 si existe sintonizador
 		if (sintonizador == true) {
 			PrecioTotalTelevision += 50;
-			return PrecioTotalTelevision;
 		}
 		return PrecioTotalTelevision;
 	}
-
 }

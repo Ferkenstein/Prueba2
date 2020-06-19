@@ -9,18 +9,20 @@ public class Lavadora extends Electrodomestico {
 	protected final int CARGALAVADORA_INICIAL = 5;
 
 	// Constructor por defecto
-	public Lavadora() {
-	}
 
-	// Constructor con los atributos heredados
-	public Lavadora(double precioBase, String color, char consumoEnergetico, double peso, int cargaLavadora) {
-		super(precioBase, color, consumoEnergetico, peso);
-		this.cargaLavadora = cargaLavadora;
+	public Lavadora() {
+		super();
+		this.cargaLavadora = CARGALAVADORA_INICIAL;
 	}
 
 	// Constructor precio y peso
-	public Lavadora(double precioBase, double peso, int cargaLavadora) {
+	public Lavadora(double precioBase, double peso) {
 		super(precioBase, peso);
+	}
+	
+	// Constructor con los atributos heredados
+	public Lavadora(String color, char consumoEnergetico, double peso, double precioBase, int cargaLavadora) {
+		super(precioBase, color, consumoEnergetico, peso);
 		this.cargaLavadora = cargaLavadora;
 	}
 
