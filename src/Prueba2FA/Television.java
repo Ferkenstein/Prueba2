@@ -20,8 +20,8 @@ public class Television extends Electrodomestico {
 	// Constructor con el precio y peso.
 	public Television(double precioBase, double peso) {
 		super(precioBase, peso);
-		this.resolucion = resolucion;
-		this.sintonizador = sintonizador;
+		this.resolucion = RESOLUCION_INICIAL;
+		this.sintonizador = SINTONIZADOR_INICIAL;
 	}
 
 	// Constructor con resolucion, sintonizador y atributos heredados
@@ -44,7 +44,7 @@ public class Television extends Electrodomestico {
 
 	protected double PrecioFinalTelevision() {
 		double PrecioTotalTelevision = PrecioFinalElectrodomestico();
-		// Adicionar si precio
+		// Adicionar su precio
 		if (resolucion > 40) {
 			PrecioTotalTelevision = (PrecioTotalTelevision * 1.30);
 		}
