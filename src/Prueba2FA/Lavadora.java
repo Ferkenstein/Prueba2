@@ -17,6 +17,7 @@ public class Lavadora extends Electrodomestico {
 	// Constructor precio y peso
 	public Lavadora(double precioBase, double peso) {
 		super(precioBase, peso);
+		this.cargaLavadora = cargaLavadora;
 	}
 
 	// Constructor con los atributos heredados

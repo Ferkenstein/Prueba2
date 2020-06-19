@@ -20,6 +20,8 @@ public class Television extends Electrodomestico {
 	// Constructor con el precio y peso.
 	public Television(double precioBase, double peso) {
 		super(precioBase, peso);
+		this.resolucion = resolucion;
+		this.sintonizador = sintonizador;
 	}
 
 	// Constructor con resolucion, sintonizador y atributos heredados
