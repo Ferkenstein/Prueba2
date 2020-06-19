@@ -20,8 +20,8 @@ public class Electrodomestico {
 
 	// Constructor por defecto
 	public Electrodomestico() {
-		this.precioBase =  PRECIO_INICIAL;
-		this.color = COLOR_INICIAL ;
+		this.precioBase = PRECIO_INICIAL;
+		this.color = COLOR_INICIAL;
 		this.consumoEnergetico = CONSUMO_INICIAL;
 		this.peso = PESO_INICIAL;
 	}
@@ -124,17 +124,3 @@ public class Electrodomestico {
 	}
 
 }
-	
-
-
-	
-	
-	
-	
-	
-	
-	
-			
-	
-
-

@@ -4,12 +4,11 @@ public class Lavadora extends Electrodomestico {
 
 	// Atributo propio de la clase lavadora
 	private int cargaLavadora;
-	
+
 	// Definicion de constante por defecto
 	protected final int CARGALAVADORA_INICIAL = 5;
 
 	// Constructor por defecto
-
 	public Lavadora() {
 		super();
 		this.cargaLavadora = CARGALAVADORA_INICIAL;
@@ -19,7 +18,7 @@ public class Lavadora extends Electrodomestico {
 	public Lavadora(double precioBase, double peso) {
 		super(precioBase, peso);
 	}
-	
+
 	// Constructor con los atributos heredados
 	public Lavadora(String color, char consumoEnergetico, double peso, double precioBase, int cargaLavadora) {
 		super(precioBase, color, consumoEnergetico, peso);
@@ -31,7 +30,8 @@ public class Lavadora extends Electrodomestico {
 		return cargaLavadora;
 	}
 
-	// Adicionar a Precio Total 50 si existe una carga mayor a 30, sino mantener Precio Total
+	// Adicionar a Precio Total 50 si existe una carga mayor a 30, sino mantener
+	// Precio Total
 
 	protected double PrecioFinalLavadora() {
 		double PrecioTotalLavadora = PrecioFinalElectrodomestico();
